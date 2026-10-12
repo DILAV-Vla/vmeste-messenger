@@ -1,26 +1,9 @@
 {
-  "name": "server",
+  "name": "vmeste",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "bcrypt": "^6.0.0",
-    "cors": "^2.8.6",
-    "dotenv": "^18.0.7",
-    "express": "^5.3.0",
-    "jsonwebtoken": "^9.0.3",
-    "multer": "^2.4.0",
-    "pg": "^8.23.1",
-    "socket.io": "^4.8.4"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.14"
+    "postinstall": "cd server && npm install || true",
+    "start": "node server/index.js",
+    "serve-client": "npx serve -s client/dist -l 80"
   }
 }
