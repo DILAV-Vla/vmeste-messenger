@@ -5,9 +5,8 @@ meta:
     version: "20"
 
 build:
-  additionalCommands:
-    - cd server && npm install
+  skip: false
 
 run:
-  command: sh -c "cd server && node index.js"
-  containerPort: 5000
+  command: node server/index.js
+  containerPort: 80
