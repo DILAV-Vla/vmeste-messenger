@@ -11,6 +11,7 @@ const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: '*' } });
 
 app.use(cors());
+app.get('/', (req, res) => res.send('OK'));
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
