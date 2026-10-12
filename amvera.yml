@@ -1,0 +1,14 @@
+meta:
+  environment: node
+  toolchain:
+    name: npm
+    version: 20
+
+build:
+  additionalCommands: npm install
+  root: server
+
+run:
+  command: node index.js
+  persistenceMount: /data
+  containerPort: 5000
